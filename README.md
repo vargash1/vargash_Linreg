@@ -34,4 +34,4 @@ The Data Set I used can be found [here](https://archive.ics.uci.edu/ml/datasets/
 ###What you will see
 ![alt Text](http://i.imgur.com/yayLuV1.png "Sample Run")
 ![alt Text](http://i.imgur.com/5VLHR0I.png "Sample Run")
-![alt Text](http://i.imgur.com/jtqNaVA.png "Lauch using R shell")
+![alt Text](http://i.imgur.com/jtqNaVA.png "Launch using R shell")
