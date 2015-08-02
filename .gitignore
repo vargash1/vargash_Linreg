@@ -1,14 +1,14 @@
-Data
-  ZZZZhistory
-        src/.RData
-            src/.Rhistory
-                src/fertility.csv
-                    src/www/
-                        tex/proposal_vargash1.aux
-                            tex/proposal_vargash1.fdb_latexmk
-                                tex/proposal_vargash1.fls
-                                    tex/proposal_vargash1.log
-                                        tex/proposal_vargash1.out
-                                            tex/proposal_vargash1.pdf
-                                                tex/proposal_vargash1.synctex.gz
-
+.gitignore
+.RData
+.Rhistory
+src/.RData
+src/.Rhistory
+src/fertility.csv
+src/www/
+tex/proposal_vargash1.aux
+tex/proposal_vargash1.fdb_latexmk
+tex/proposal_vargash1.fls
+tex/proposal_vargash1.log
+tex/proposal_vargash1.out
+tex/proposal_vargash1.pdf
+tex/proposal_vargash1.synctex.gz
