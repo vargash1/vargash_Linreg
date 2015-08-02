@@ -1,4 +1,3 @@
-.gitignore
 .RData
 .Rhistory
 src/.RData
