@@ -3,17 +3,129 @@
 % @Email: vargash1@wit.edu
 % @Date:   2015-08-03 13:55:43
 % @Last Modified by:   vargash1
-% @Last Modified time: 2015-08-03 13:57:49
-
+% @Last Modified time: 2015-08-04 09:58:02
 \documentclass{article}
-\usepackage{amsmath,amssymb}
+\usepackage{amsmath,amssymb,graphicx}
 \usepackage[margin=0.5in]{geometry}
+\graphicspath{{./img/}} %change this if win32
 \pagenumbering{gobble}
 \begin{document}$\\$
-	Gary Simdunza\\  
-	MATH505:\\
-	Hector Vargas\\
-	$$\textbf{\textit{Final Report for Linear Regression Project}}$$
+	% -------------------------------------------------------------
+	% cover page
 	$$\line(1,0){525}$$\\
+	$$\textbf{\textit{Final Report Linear Regression Analysis Project}}$$
+	$$\textbf{\textit{Male Fertility}}$$
+	$$\textbf{\textit{Math-505}}$$
+	$$\textbf{\textit{Professor Gary Simundza}}$$
+	$$\textbf{\textit{Hector Vargas}}$$
+	\clearpage
+	% -------------------------------------------------------------
+	% headers for par 1
+	$\\$
+	Gary Simundza\\  
+	MATH505\\
+	Hector Vargas\\
+	Tue 4 Aug 2015
+	$$\textbf{\textit{Male Fertility}}$$
+	$$\line(1,0){525}$$
+	\setlength\parindent{24pt}
+	% -------------------------------------------------------------
+	% par 1 intro 1
+	$\\$
+
+	Linear regression analysis allows us to see if there is a correlation with two variables in a collected data set. Moreover, it can be used to see if we can use the data collected to make any inferences after we conduct linear regression on the data sets variables. The data set I chose was data collected on certain variables of men and whether their fertility was normal or altered. Using basic logic, we can infer that maybe variables such as alcohol consumption or smoking may have an effect on male fertility; that is the quality of their sperm. Conducting linear regression analysis on the variables collected in the data set allows us to see if there indeed is some correlation between the variable and male fertility. However it can also lead to the data not being of good use to see if there is indeed some correlation, this does not signify these variables do not have any correlation. But simply that the data set was a poor one to use for this operation. 
+	% -------------------------------------------------------------
+	% par 2 some inferences
+	$\\$
+
+	Before we conduct linear regression on our data, we must make some inferences on what we see from the data. As we have mentioned before, we can infer that maybe variables such as alcohol and smoking habits among the men may have some effect on fertility. Thus we should expect for men who commonly smoke or drink in their lives to have an altered sperm result.
+	% -------------------------------------------------------------
+	% SMOKING least sq plot linear regression analysis
+	$$\includegraphics[scale=.3]{smoking_sq.png}$$
+	$$\textit{Fig 1}$$
+	% -------------------------------------------------------------
+	% par 3 smoking habits analysis
+	$\\$
+
+	As we can see, there is almost no indication that smoking habits of men affect their sperm quality. There are men with altered sperm quality, yet claim they have never smoked. However there are men with altered sperm quality and claim they daily smokers. Thus, given our data set, we cannot make any claims or inferences using linear regression analysis. We can our R values or otherwise known as the correlation coefficient to further back our claim. We find that $r = .046$. Thus it's safe to say that it would be unreasonable to use our linear model to make any claims. This could be due to the quality of data, or there may be actually poor evidence of smoking habits being correlated with the quality of sperm.
+	% -------------------------------------------------------------
+	% par 4 intro to alcohol analysis
+	$\\$
+
+	Unfortunately, our linear regression analysis results to see if smoking habits had any effect on male fertility was poor. Our linear model was unreasonable to use to make any further claims, even our $r$ value was incredibly low. Typically a reasonable linear model should indicate a positive or negative slope, and the $r$ value should be pretty close to 1. With that out of the way, we can take a look at the effects alcohol consumption habits may have had on male fertility. Although now we may expect a low $r$ value as the data returned one for smoking habits.
+	\clearpage 	
+	% -------------------------------------------------------------
+	% ALCOHOL least sq plot linear regression analysis
+	$$\includegraphics[scale=.3]{alcohol_sq.png}$$
+	$$\textit{Fig 2}$$
+	% -------------------------------------------------------------
+	% summ to alcohol analysis
+	$\\$
+
+	Note the linear model having a negative slope, thus we may have a stronger relationship between these two variables. Note that there seems to a be a strong relationship with males who claimed they hardly drank alcohol and having normal sperm quality. However, there is not one male in the data set who had altered sperm quality and drank frequently. This could mean that based on the data set, we cannot make assumptions from our linear regression anaylsis. Since our results from smoking habits were likewise, we should expect a low r value again. We find that our $r = - .145$, we can interpret this as indicating no correlation between high alcohol consumption and having altered sperm, but it does indicate a slight correlation between low alcohol consumption and having normal sperm.
+	% -------------------------------------------------------------
+	% par 5 results so fars
+	$\\$
+
+	Thus, our linear model is unreasonable to make any claims off of. So far our expected results have been hindered by our data. We will not be able to make any inferences from our regression analysis based off our data. We can take a look at confidence intervals for the slope to see if $\beta = 0$. If the interval includes 0, then we can say that the mean of $Y$ does not depend linearly on $x$. This makes our data set a poor one to use for linear regression analysis.
+
+	% -------------------------------------------------------------
+	% par 6 confi interval
+	$\\$
+
+	For both of these tests, we want to test for when $\beta = 0$, thus we can set our $H_{0} = 0$ which gives us $H_{1} \neq 0$. We will do this on $95\%$ confidence interval to see if our estimated value can be 0. 
+
+	For our smoke data we find that our estimated mean for $\beta = .01853$. Whereas our standard error is $0.04075$. We can say with $95\%$ confidence that our true expected mean lies on the interval:
+
+	$$ -0.06297 < \beta < .10003$$
+
+	Thus we say that our $Y$ may not depend linearly on $x$, this assures us that it is not safe to make any inferences on our linear regression analysis based on our data set. We should see if we can say the same for our analysis results regarding the frequency of alcohol consumption from our data set.
+
+	Like the previous test, we want to test for when $\beta = 0$, thus we can set our $H_{0} = 0$ which gives us $H_{1} \neq 0$. We will do this on $95\%$ confidence interval to see if our estimated value can be 0.
+
+	For our alcohol consumption data we find that our estimated mean for $\beta = -.2823$with a standard error of $.1949$. We can say with $95\%$ confidence that our true expected mean lies on the following interval:
+
+	$$ -.6721 < \beta < .1075$$
+	% -------------------------------------------------------------
+	% par 7 confi interval summary
 	
+	In both cases we wind up having to accept our $H_{0}$. It is pretty clear now that we cannot make any inferences from our analysis based on the data set. These results were to be expected as our $r$ values for both of these variables were both quite low. A good linear regression analysis would wind up having $r$ values close to 1, that would mean that one can safely make inferences from the analysis based on the data set. It is important that we consider the data set we are working on as it is possible that another data set with the same variables measured could return completely different results. In other words its important to consider that the data set is probably of the population.
+
+	\clearpage
+	% -------------------------------------------------------------
+	% par 8 r values & summary
+
+	Before we conclude, we will take a look at all the $r$ values to see if there was any variable where we could have made inferences on the data set.
+	\begin{itemize}
+		\item Season analysis was performed: $0.192$
+		\item Age at the time of analysis: $0.115$
+		\item Childish Diseases: $-0.040$
+		\item Accident/Serious Trauma: $-0.141$
+		\item Surgical Intervention: $0.054$
+		\item High fevers in the last year: $-0.121$
+		\item Frequency of alcohol consumption: $-0.145$
+		\item Smoking Habits: $0.046$
+		\item Hours spent sitting daily: $0.023$
+	\end{itemize}
+
+	One that caught my attention after the analysis was complete was the variable: Season analysis was performed. There is evidence that a man's fertility is affected by the outside climate, specifically the heat. Heat can have an effect on male fertility, in our case, the data set would indicate altered fertility results. Having the highest $r$ value out of all the variables, we will conduct a $95\%$ confidence interval test to see if $\beta = 0$. Note that we know what to expect if we were to conduct this exam on the rest of the variables as well. With the majority having low $r$ values, we shouldn't get anything too different from the confidence interval results we received from the Smoke, and Alcohol variables.
+	% -------------------------------------------------------------
+	% par 9 confi seasons
+	$\\$
+	We begin our confidence interval test by setting our $H_{0} = 0$ and $H_{1} \neq 1$. We find that the estimated mean for Season analysis was performed is $.07888$ with a standard error of $.04064$. We can say with $95\%$ confidence that the true mean lies on the following interval.
+
+	$$ -0.002392 < \beta < .160168$$
+	% -------------------------------------------------------------
+	% par 10 confi seasons summary
+	
+	We get pretty close to rejecting our $H_{0}$ here, indicating that there may be some correlation with the season and male fertility. As I have mentioned before, heat does have some effect on male fertility, specifically the quality of sperm. Although we accept our $H_{0}$, we did come pretty close to proving that $Y$ depending linearly on $x$. Here is the graph and it was completely what I was expecting. The graph shows a linear relationship with hotter seasons and altered male sperm. Although some outside information that could affect this is where the data was taken.
+	% -------------------------------------------------------------
+	% SEASON least sq plot linear regression analysis
+	$$\includegraphics[scale=.3]{season_sq.png}$$
+	$$\textit{Fig 3}$$
+	% -------------------------------------------------------------
+	% Conclusion
+
+	With our confidence interval regarding the highest $r$ value also failing to reject the $H_{0}$, then we should expect for each of these variables to have the same result when we conduct the $95\%$ confidence test. Although there do seem to be some correlations with the variables and the fertility of men, we cannot make any safe inferences from our linear regression analysis based on this data set. Some causes for this could be too many outliers within the data set, too small of a sample size, age within sample size was too wide, and location/demographic of where this data was collected. Had our $r$ values been closer to 1 and not 0, then we could've safely made inferences from on our analysis on the data set.
+
 \end{document}
