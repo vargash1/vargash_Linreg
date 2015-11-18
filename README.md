@@ -8,7 +8,9 @@ This is a repo for my final project on linear regression using R and the R packa
 ```
 
 ###Usage
+[Visit the project hosted on ShinyApps!](https://vargash1.shinyapps.io/vargash)
 ```R
+	#to use locally
 	#from your terminal
 	./launch.r
 	
